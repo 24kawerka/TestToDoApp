@@ -1,0 +1,63 @@
+$font-f: "Tenor Sans", sans-serif;
+
+.task-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 1%;
+    .title-task-container {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        .title {
+            font-size: 20px;
+            margin-right: 5%;
+            font-family: $font-f;
+        }
+        .title-done {
+            font-size: 20px;
+            margin-right: 5%;
+            font-family: $font-f;
+            text-decoration: line-through;
+        }
+        .change-button {
+            background-color: yellow;
+        }
+    }
+
+    .title-task-input {
+        display: flex;
+        justify-content: flex-end;
+        .submit-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 10%;
+            &:hover {
+                border-color: green;
+            }
+        }
+        .return-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 10%;
+            &:hover {
+                border-color: red;
+            }
+        }
+    }
+    .delete-button {
+        background-color: red;
+        border-radius: 10%;
+    }
+    .done-button {
+        background-color: green;
+        border-radius: 10%;
+        .finished-window {
+            display: none;
+        }
+        &:hover .finished-window {
+            display: block;
+            width: 250px;
+        }
+    }
+}

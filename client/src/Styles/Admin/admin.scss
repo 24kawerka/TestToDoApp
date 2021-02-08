@@ -1,0 +1,85 @@
+$font-f: "Tenor Sans", sans-serif;
+
+.admin-container {
+    display: block;
+    height: 600px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 0 3px black;
+    margin-top: 100px;
+    background-color: cornflowerblue;
+    margin-left: 20%;
+    .wrapper {
+        display: grid;
+        grid-template-areas: "users tasks";
+        grid-template-columns: 40% 60%;
+
+        .users-side {
+            grid-area: users;
+            padding-left: 4%;
+        }
+        .tasks-side {
+            grid-area: tasks;
+            padding-left: 4%;
+            .tasks-title {
+                display: flex;
+                justify-content: space-around;
+                .log-out {
+                    transition-duration: 0.4s;
+                    background-color: whitesmoke;
+                    border-radius: 10px;
+                    width: 20%;
+                    height: 1%;
+                    margin-top: 2%;
+                    text-align: center;
+                    font-family: $font-f;
+                    &:hover {
+                        background-color: red;
+                        color: whitesmoke;
+                    }
+                }
+            }
+            .user-task {
+                font-size: medium;
+                color: white;
+                padding: 1%;
+                border-bottom: 1px solid white;
+            }
+            .task-done-wrapper {
+                padding: 1%;
+                border-bottom: 1px solid white;
+                .user-task-done {
+                    font-size: medium;
+                    color: white;
+                    text-decoration: line-through;
+                }
+                .doneTime {
+                    font-size: medium;
+                    color: white;
+                    padding: 1%;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.user-list-container {
+    .show-tasks {
+        transition-duration: 0.4s;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        width: 80%;
+        height: 2%;
+        margin-bottom: 1%;
+        text-align: center;
+        font-family: $font-f;
+        &:focus {
+            background-color: blue;
+            color: whitesmoke;
+        }
+        &:hover {
+            background-color: blue;
+            color: whitesmoke;
+        }
+    }
+}
